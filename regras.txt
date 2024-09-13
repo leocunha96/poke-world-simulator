@@ -1,0 +1,55 @@
+Classe Pokemon
+
+    Responsavel por criar pokemons 
+        pokemons devem ter Id global, Nome, Type, Região, nível, shiny, status(status em geral, hp, atack, defense,), altura, peso, nature,  requisitos evolução
+
+Classe Evolução
+    Responsavel por evoluir, se possível (depende de nível, itens, condições), o pokemon e por informar as evoluções caso ja tenham ocorrido (ex estou com charizard
+    informaria que ja foi um charmanda, evoluiu no nivel 16 para charmeleon e depois no 36)
+
+Classe Type
+
+    Responsavel por gerenciar os tipos de cada pokemon, e as interações deles (fraquezas e resistencias) e afetara diretamente em batalhas!
+
+Classe Abilities 
+
+    Responsavel por detalhar a habilidade. Categorização de ativa ou passiva. Podendo influenciar em batalhas ou em futuras atualizações.
+    Teria nome, tipo, descrição e efeito
+
+Classe Pokedex
+
+    Responsavel por fazer a gestão ordenada da lista de pokemons com base no ID Global, ou no nome, ou opção surpreenda-me (com um valor aleatório de pokemon da lista)
+    ou busca avançada (que seria possível adicionar type, Abilities, área)
+
+Classe NPC
+    Responsavel pela criação de pessoas em geral,  treinadores, viloes e o jogador
+        Nome, genero, idade, categoria (se é npc comum, npc historia, enfermeira, lojista, npc trader, treinador, lider, vilao)
+        Algumas dessas pessoas poderao ter pokemons. Treinadores terão ranking/nível (nivel de 1 a 100, se for 0, nao e lutador).
+
+Classe Nature
+    Responsavel por fazer a gestão das natures, que alteram status do pokemon
+
+Classe status
+    Responsavel por fazer a gestão dos status do pokemon com base na nature, no nivel e na vida recebida das batalhas. Considerar status de condições especiais, 
+    sleeping, poison, etc. Pode ser status dinâmicos (boots temporários com itens) ou permanentes.
+
+Classe Batalha
+    Aqui será modelada a mecânica de turnos, onde o jogador e o oponente atacam com base em velocidade do pokemon.
+    Também pode incluir opções estratégicas como substituir Pokémon, usar itens, etc.
+
+Classe Ginasio
+    tem um lider, alguns bots e sao organizados com niveis de Batalha
+
+class mochila
+    na mochila guarda-se itens que podem ser usados nas batalhas, id do jogador, carteira (dinheiro), insignias, pokemons (a ordem importa para a saber o pokemon 
+    da batalha, limite de 6 pokemons na mochila)
+
+class tempo
+    responsavel por alterar o clima durante o jogo/batalhas
+
+class itens
+    itens de batalha: pokeballs, poções, antidotos, antiparalisante, etc
+
+class computador
+    possível estocar ou sacar pokemons.
+
