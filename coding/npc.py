@@ -40,3 +40,19 @@ class NPC():
     @category.setter
     def category(self, value):
         self._category = value
+
+    @property
+    def pokemons(self):
+        return self._pokemons
+    
+    @pokemons.setter
+    def pokemons(self, value):
+        self._pokemons = value
+
+    @property
+    def level(self):
+        return self._level
+    
+    @level.setter
+    def level(self, value):
+        self._level = value
