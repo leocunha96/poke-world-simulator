@@ -6,7 +6,7 @@ class NPC():
         self._age = self.checking_valid_age(age)
         self._category = self.checking_valid_categories(category)
         self._pokemons = pokemons if pokemons is not None else []
-        self._level = level
+        self._level = self.checking_valid_level(level)
 
     
     @property
@@ -80,4 +80,11 @@ class NPC():
                 return age
         else:
             return 'Invalid'
-
+        
+    def checking_valid_level(self, level):
+        max_level = 100
+        minimum_level = 0
+        if level >= minimum_level and level <= max_level:
+                return level
+        else:
+            return 'Invalid'
