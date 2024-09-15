@@ -2,7 +2,7 @@ class NPC():
     
     def __init__(self, name, gender, age, category, pokemons = None, level = 0):
         self._name = name.title()
-        self._gender = gender
+        self._gender = gender.title()
         self._age = age
         self._category = category
         self._pokemons = pokemons if pokemons is not None else []

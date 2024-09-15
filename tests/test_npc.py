@@ -106,6 +106,71 @@ class TestClass:
         assert result_pokemons_npc2 == expected_pokemons_npc2
         assert result_level_npc2 == expected_level_npc2
 
+    def test_create_npc_with_firts_letter_of_gender_capitalized(self):
+
+        #given
+        name_npc1 = 'Ash'
+        gender_npc1 = 'Male'
+        age_npc1 = 20
+        category_npc1 = 'Trainer'
+        pokemons_npc1 = ['Pikachu', 'Bulbassaur', 'Charmander', 'Squirtle', 'Pidgeot', 'Butterfree']
+        level_npc1 = 12
+
+        name_npc2 = 'misty'
+        gender_npc2 = 'female'
+        age_npc2 = 18
+        category_npc2 = 'Gym Leader'
+        pokemons_npc2 = ['Staryu', 'Goldeen', 'Psyduck', 'Starmie']
+        level_npc2 = 15
+
+        #expected
+        expected_name_npc1 = 'Ash'
+        expected_gender_npc1 = 'Male'
+        expected_age_npc1 = 20
+        expected_category_npc1 = 'Trainer'
+        expected_pokemons_npc1 = ['Pikachu', 'Bulbassaur', 'Charmander', 'Squirtle', 'Pidgeot', 'Butterfree']
+        expected_level_npc1 = 12
+
+        expected_name_npc2 = 'Misty'
+        expected_gender_npc2 = 'Female'
+        expected_age_npc2 = 18
+        expected_category_npc2 = 'Gym Leader'
+        expected_pokemons_npc2 = ['Staryu', 'Goldeen', 'Psyduck', 'Starmie']
+        expected_level_npc2 = 15
+
+        #when
+        npc1 = NPC(name = name_npc1, gender = gender_npc1, age = age_npc1, category = category_npc1, pokemons = pokemons_npc1, level = level_npc1)
+        npc2 = NPC(name = name_npc2, gender = gender_npc2, age = age_npc2, category = category_npc2, pokemons = pokemons_npc2, level = level_npc2)
+
+        #them
+        result_name_npc1 = npc1.name
+        result_gender_npc1 = npc1.gender
+        result_age_npc1 = npc1.age
+        result_category_npc1 = npc1.category
+        result_pokemons_npc1 = npc1.pokemons
+        result_level_npc1 = npc1.level
+
+        result_name_npc2 = npc2.name
+        result_gender_npc2 = npc2.gender
+        result_age_npc2 = npc2.age
+        result_category_npc2 = npc2.category
+        result_pokemons_npc2 = npc2.pokemons
+        result_level_npc2 = npc2.level
+
+        #assert
+        assert result_name_npc1 == expected_name_npc1
+        assert result_gender_npc1 == expected_gender_npc1
+        assert result_age_npc1 == expected_age_npc1
+        assert result_category_npc1 == expected_category_npc1
+        assert result_pokemons_npc1 == expected_pokemons_npc1
+        assert result_level_npc1 == expected_level_npc1
+
+        assert result_name_npc2 == expected_name_npc2
+        assert result_gender_npc2 == expected_gender_npc2
+        assert result_age_npc2 == expected_age_npc2
+        assert result_category_npc2 == expected_category_npc2
+        assert result_pokemons_npc2 == expected_pokemons_npc2
+        assert result_level_npc2 == expected_level_npc2
 
     
     def test_create_npc_witht_name_being_a_string(self):
