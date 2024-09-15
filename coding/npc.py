@@ -3,7 +3,7 @@ class NPC():
     def __init__(self, name, gender, age, category, pokemons = None, level = 0):
         self._name = str(name).title()
         self._gender = self.checking_valid_genders(gender)
-        self._age = age
+        self._age = self.checking_valid_age(age)
         self._category = self.checking_valid_categories(category)
         self._pokemons = pokemons if pokemons is not None else []
         self._level = level
@@ -70,6 +70,14 @@ class NPC():
         formated_category = str(category).title()
         if formated_category in valid_categories:
                 return formated_category
+        else:
+            return 'Invalid'
+    
+    def checking_valid_age(self, age):
+        max_age = 100
+        minimum_age = 5
+        if age >= minimum_age and age <= max_age:
+                return age
         else:
             return 'Invalid'
 
