@@ -1,7 +1,7 @@
 class NPC():
     
     def __init__(self, name, gender, age, category, pokemons = None, level = 0):
-        self._name = name.title()
+        self._name = str(name).title()
         self._gender = gender.title()
         self._age = age
         self._category = category.title()
