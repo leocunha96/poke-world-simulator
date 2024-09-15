@@ -489,4 +489,37 @@ class TestClass:
         assert result_level_npc1 == expected_level_npc1
     
     def test_create_npc_with_pokemons_between_0_and_6(self):
-        ...
+        #given
+        name_npc1 = 'Ash'
+        gender_npc1 = 'Male'
+        age_npc1 = 20
+        category_npc1 = 'Trainer'
+        pokemons_npc1 = ['Pikachu', 'Bulbassaur', 'Charmander', 'Squirtle', 'Pidgeot', 'Butterfree', 'Taurus']
+        level_npc1 = -5
+
+        #expected
+        expected_name_npc1 = 'Ash'
+        expected_gender_npc1 = 'Male'
+        expected_age_npc1 = 20
+        expected_category_npc1 = 'Trainer'
+        expected_pokemons_npc1 = 'Invalid'
+        expected_level_npc1 = 'Invalid'
+
+        #when
+        npc1 = NPC(name = name_npc1, gender = gender_npc1, age = age_npc1, category = category_npc1, pokemons = pokemons_npc1, level = level_npc1)
+
+        #them
+        result_name_npc1 = npc1.name
+        result_gender_npc1 = npc1.gender
+        result_age_npc1 = npc1.age
+        result_category_npc1 = npc1.category
+        result_pokemons_npc1 = npc1.pokemons
+        result_level_npc1 = npc1.level
+
+        #assert
+        assert result_name_npc1 == expected_name_npc1
+        assert result_gender_npc1 == expected_gender_npc1
+        assert result_age_npc1 == expected_age_npc1
+        assert result_category_npc1 == expected_category_npc1
+        assert result_pokemons_npc1 == expected_pokemons_npc1
+        assert result_level_npc1 == expected_level_npc1

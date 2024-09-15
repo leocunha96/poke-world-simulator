@@ -1,11 +1,11 @@
 class NPC():
-    
+    MAX_POKEMONS = 6
     def __init__(self, name, gender, age, category, pokemons = None, level = 0):
         self._name = str(name).title()
         self._gender = self.checking_valid_genders(gender)
         self._age = self.checking_valid_age(age)
         self._category = self.checking_valid_categories(category)
-        self._pokemons = pokemons if pokemons is not None else []
+        self._pokemons = self.checking_number_valid_pokemons(pokemons)
         self._level = self.checking_valid_level(level)
 
     
@@ -88,3 +88,11 @@ class NPC():
                 return level
         else:
             return 'Invalid'
+
+    def checking_number_valid_pokemons(self, pokemons):
+        if pokemons is None:
+             return []
+        if len(pokemons) > self.MAX_POKEMONS:
+                return 'Invalid'
+        else:
+            return pokemons
