@@ -4,7 +4,7 @@ class NPC():
         self._name = str(name).title()
         self._gender = self.checking_valid_genders(gender)
         self._age = age
-        self._category = str(category).title()
+        self._category = self.checking_valid_categories(category)
         self._pokemons = pokemons if pokemons is not None else []
         self._level = level
 
@@ -65,5 +65,11 @@ class NPC():
         else:
             return 'Invalid'
         
+    def checking_valid_categories(self, category):
+        valid_categories = ('Bandit', 'Common', 'Guide', 'Gym Leader', 'Healer', 'Player', 'Professor', 'Rival', 'Seller', 'Specialist', 'Storyteller', 'Trader', 'Trainer')
+        formated_category = str(category).title()
+        if formated_category in valid_categories:
+                return formated_category
+        else:
+            return 'Invalid'
 
-    
