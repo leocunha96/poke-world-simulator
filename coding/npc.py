@@ -2,11 +2,11 @@ class NPC():
     
     def __init__(self, name, gender, age, category, pokemons = None, level = 0):
         self._name = str(name).title()
-        self._gender = str(gender).title()
+        self._gender = self.checking_valid_genders(gender)
         self._age = age
         self._category = str(category).title()
         self._pokemons = pokemons if pokemons is not None else []
-        self.level = level
+        self._level = level
 
     
     @property
@@ -56,5 +56,14 @@ class NPC():
     @level.setter
     def level(self, value):
         self._level = value
+
+    def checking_valid_genders(self, gender):
+        valid_genders = ('Male', 'Female')
+        formated_gender = str(gender).title()
+        if formated_gender in valid_genders:
+                return formated_gender
+        else:
+            return 'Invalid'
+        
 
     
