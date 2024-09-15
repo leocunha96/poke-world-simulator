@@ -4,7 +4,7 @@ class NPC():
         self._name = name.title()
         self._gender = gender.title()
         self._age = age
-        self._category = category
+        self._category = category.title()
         self._pokemons = pokemons if pokemons is not None else []
         self.level = level
 
