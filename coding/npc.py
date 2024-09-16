@@ -96,3 +96,4 @@ class NPC():
                 return 'Invalid'
         else:
             return pokemons
+        
