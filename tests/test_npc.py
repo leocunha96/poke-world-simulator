@@ -411,37 +411,22 @@ class TestNpc:
 
 
     def test_create_npc_with_all_information_except_pokemons(self):
-        #given
-        name = 'Ash'
-        gender = 'Male'
-        age = 20
-        category = 'Trainer'
-        level = 12
-
         #expected
-        expected_name = 'Ash'
-        expected_gender = 'Male'
-        expected_age = 20
-        expected_category = 'Trainer'
-        expected_pokemons = []
-        expected_level = 12
+        expected_name_npc1 = 'Ash'
+        expected_gender_npc1 = 'Male'
+        expected_age_npc1 = 20
+        expected_category_npc1 = 'Trainer'
+        expected_pokemons_npc1 = []
+        expected_level_npc1 = 12
 
         #when
-        npc = NPC(name = name, gender = gender, age = age, category = category, level = level) #npc instance
+        npc1 = NPC(name = self.name_npc1, gender = self.gender_npc1, age = self.age_npc1, category = self.category_npc1, level = self.level_npc1)
 
-        #then
-        result_name = npc.name
-        result_gender = npc.gender
-        result_age = npc.age
-        result_category = npc.category
-        result_pokemons = npc.pokemons
-        result_level = npc.level
-
-        #assert
-        assert result_name == expected_name
-        assert result_gender == expected_gender
-        assert result_age == expected_age
-        assert result_category == expected_category
-        assert result_pokemons == expected_pokemons
-        assert result_level == expected_level
+        #them
+        assert npc1.name == expected_name_npc1
+        assert npc1.gender == expected_gender_npc1
+        assert npc1.age == expected_age_npc1
+        assert npc1.category == expected_category_npc1
+        assert npc1.pokemons == expected_pokemons_npc1
+        assert npc1.level == expected_level_npc1
         
