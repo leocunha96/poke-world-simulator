@@ -94,7 +94,7 @@ class NPC():
         if pokemons is None:
              return []
         if len(pokemons) > self.MAX_POKEMONS:
-                return 'Invalid'
+                raise Exception ('Invalid Amount of Pokemons')
         else:
             return pokemons
         

@@ -387,26 +387,26 @@ class TestNpc:
 
     def test_create_npc_with_invalid_pokemons_numbers(self):
         #given
-        pokemons_npc1 = ['Pikachu', 'Bulbassaur', 'Charmander', 'Squirtle', 'Pidgeot', 'Butterfree', 'Taurus']
+        with pytest.raises(Exception):
+            pokemons_npc1 = ['Pikachu', 'Bulbassaur', 'Charmander', 'Squirtle', 'Pidgeot', 'Butterfree', 'Taurus']
 
-        #expected
-        expected_name_npc1 = 'Ash'
-        expected_gender_npc1 = 'Male'
-        expected_age_npc1 = 20
-        expected_category_npc1 = 'Trainer'
-        expected_pokemons_npc1 = 'Invalid'
-        expected_level_npc1 = 12
+            #expected
+            expected_name_npc1 = 'Ash'
+            expected_gender_npc1 = 'Male'
+            expected_age_npc1 = 20
+            expected_category_npc1 = 'Trainer'
+            expected_level_npc1 = 12
 
-        #when
-        npc1 = NPC(name = self.name_npc1, gender = self.gender_npc1, age = self.age_npc1, category = self.category_npc1, pokemons = pokemons_npc1, level = self.level_npc1)
+            #when
+            npc1 = NPC(name = self.name_npc1, gender = self.gender_npc1, age = self.age_npc1, category = self.category_npc1, pokemons = pokemons_npc1, level = self.level_npc1)
 
-        #them
-        assert npc1.name == expected_name_npc1
-        assert npc1.gender == expected_gender_npc1
-        assert npc1.age == expected_age_npc1
-        assert npc1.category == expected_category_npc1
-        assert npc1.checking_number_valid_pokemons(pokemons_npc1) == expected_pokemons_npc1
-        assert npc1.level == expected_level_npc1
+            #them
+            assert npc1.name == expected_name_npc1
+            assert npc1.gender == expected_gender_npc1
+            assert npc1.age == expected_age_npc1
+            assert npc1.category == expected_category_npc1
+            assert npc1.checking_number_valid_pokemons(pokemons_npc1)
+            assert npc1.level == expected_level_npc1
 
     def test_create_npc_with_all_information_except_pokemons(self):
         #expected
