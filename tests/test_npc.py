@@ -344,26 +344,26 @@ class TestNpc:
 
     def test_create_npc_with_invalid_level(self):
         #given
-        level_npc1 = 105
+        with pytest.raises(Exception):
+            level_npc1 = 105
 
-        #expected
-        expected_name_npc1 = 'Ash'
-        expected_gender_npc1 = 'Male'
-        expected_age_npc1 = 20
-        expected_category_npc1 = 'Trainer'
-        expected_pokemons_npc1 = ['Pikachu', 'Bulbassaur', 'Charmander', 'Squirtle', 'Pidgeot', 'Butterfree']
-        expected_level_npc1 = 'Invalid'
+            #expected
+            expected_name_npc1 = 'Ash'
+            expected_gender_npc1 = 'Male'
+            expected_age_npc1 = 20
+            expected_category_npc1 = 'Trainer'
+            expected_pokemons_npc1 = ['Pikachu', 'Bulbassaur', 'Charmander', 'Squirtle', 'Pidgeot', 'Butterfree']
 
-        #when
-        npc1 = NPC(name = self.name_npc1, gender = self.gender_npc1, age = self.age_npc1, category = self.category_npc1, pokemons = self.pokemons_npc1, level = level_npc1)
+            #when
+            npc1 = NPC(name = self.name_npc1, gender = self.gender_npc1, age = self.age_npc1, category = self.category_npc1, pokemons = self.pokemons_npc1, level = level_npc1)
 
-        #them
-        assert npc1.name == expected_name_npc1
-        assert npc1.gender == expected_gender_npc1
-        assert npc1.age == expected_age_npc1
-        assert npc1.category == expected_category_npc1
-        assert npc1.pokemons == expected_pokemons_npc1
-        assert npc1.checking_valid_level(level_npc1) == expected_level_npc1
+            #them
+            assert npc1.name == expected_name_npc1
+            assert npc1.gender == expected_gender_npc1
+            assert npc1.age == expected_age_npc1
+            assert npc1.category == expected_category_npc1
+            assert npc1.pokemons == expected_pokemons_npc1
+            assert npc1.checking_valid_level(level_npc1)
     
     def test_create_npc_with_pokemons_between_0_and_6(self):
        #expected

@@ -88,7 +88,7 @@ class NPC():
         if level >= minimum_level and level <= max_level:
                 return level
         else:
-            return 'Invalid'
+            raise Exception ('Invalid Level')
 
     def checking_number_valid_pokemons(self, pokemons):
         if pokemons is None:
