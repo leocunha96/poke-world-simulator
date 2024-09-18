@@ -80,7 +80,7 @@ class NPC():
         if age >= minimum_age and age <= max_age:
                 return age
         else:
-            return 'Invalid'
+            raise Exception ('Invalid Age')
         
     def checking_valid_level(self, level):
         max_level = 100

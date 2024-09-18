@@ -305,22 +305,22 @@ class TestNpc:
     
     def test_create_npc_with_invalid_age(self):
         #given
-        age_npc1 = 3
+        with pytest.raises(Exception):
+            age_npc1 = 3
 
-        #expected
-        expected_name_npc1 = 'Ash'
-        expected_gender_npc1 = 'Male'
-        expected_age_npc1 = 'Invalid'
-        expected_category_npc1 = 'Trainer'
+            #expected
+            expected_name_npc1 = 'Ash'
+            expected_gender_npc1 = 'Male'
+            expected_category_npc1 = 'Trainer'
 
-        #when
-        npc1 = NPC(name = self.name_npc1, gender = self.gender_npc1, age = age_npc1, category = self.category_npc1)
+            #when
+            npc1 = NPC(name = self.name_npc1, gender = self.gender_npc1, age = age_npc1, category = self.category_npc1)
 
-        #them
-        assert npc1.name == expected_name_npc1
-        assert npc1.gender == expected_gender_npc1
-        assert npc1.checking_valid_age(age_npc1) == expected_age_npc1
-        assert npc1.category == expected_category_npc1
+            #them
+            assert npc1.name == expected_name_npc1
+            assert npc1.gender == expected_gender_npc1
+            assert npc1.checking_valid_age(age_npc1)
+            assert npc1.category == expected_category_npc1
     
     def test_create_npc_with_level_between_0_and_100(self):
         #expected
