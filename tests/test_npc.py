@@ -186,22 +186,23 @@ class TestNpc:
 
     def test_create_npc_with_category_being_a_string(self):
         #given
-        self.category_npc1 = 3
-       
-        #expected
-        expected_name_npc1 = 'Ash'
-        expected_gender_npc1 = 'Male'
-        expected_age_npc1 = 20
-        expected_category_npc1 = 'Invalid'
+        with pytest.raises(Exception):
+            self.category_npc1 = 3
+        
+            #expected
+            expected_name_npc1 = 'Ash'
+            expected_gender_npc1 = 'Male'
+            expected_age_npc1 = 20
+            
 
-        #when
-        npc1 = NPC(name = self.name_npc1, gender = self.gender_npc1, age = self.age_npc1, category = self.category_npc1)
+            #when
+            npc1 = NPC(name = self.name_npc1, gender = self.gender_npc1, age = self.age_npc1, category = self.category_npc1)
 
-        #them
-        assert npc1.name == expected_name_npc1
-        assert npc1.gender == expected_gender_npc1
-        assert npc1.age == expected_age_npc1
-        assert npc1.category == expected_category_npc1
+            #them
+            assert npc1.name == expected_name_npc1
+            assert npc1.gender == expected_gender_npc1
+            assert npc1.age == expected_age_npc1
+            assert npc1.category 
 
     def test_create_npc_with_a_valid_gender(self):
 
@@ -267,22 +268,22 @@ class TestNpc:
 
     def test_create_npc_with_invalid_category(self):
         #given
-        category_npc1 = 'Fazendeiro'
+        with pytest.raises(Exception):
+            category_npc1 = 'Fazendeiro'
 
-        #expected
-        expected_name_npc1 = 'Ash'
-        expected_gender_npc1 = 'Male'
-        expected_age_npc1 = 20
-        expected_category_npc1 = 'Invalid'
+            #expected
+            expected_name_npc1 = 'Ash'
+            expected_gender_npc1 = 'Male'
+            expected_age_npc1 = 20
 
-        #when
-        npc1 = NPC(name = self.name_npc1, gender = self.gender_npc1, age = self.age_npc1, category = category_npc1)
+            #when
+            npc1 = NPC(name = self.name_npc1, gender = self.gender_npc1, age = self.age_npc1, category = category_npc1)
 
-        #them
-        assert npc1.name == expected_name_npc1
-        assert npc1.gender == expected_gender_npc1
-        assert npc1.age == expected_age_npc1
-        assert npc1.checking_valid_categories(category_npc1) == expected_category_npc1
+            #them
+            assert npc1.name == expected_name_npc1
+            assert npc1.gender == expected_gender_npc1
+            assert npc1.age == expected_age_npc1
+            assert npc1.checking_valid_categories(category_npc1) 
 
     def test_create_npc_with_age_between_5_and_100(self):
         #given

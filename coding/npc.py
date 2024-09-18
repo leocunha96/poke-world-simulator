@@ -72,7 +72,7 @@ class NPC():
         if formated_category in valid_categories:
                 return formated_category
         else:
-            return 'Invalid'
+            raise Exception ('Invalid Category')
     
     def checking_valid_age(self, age):
         max_age = 100
