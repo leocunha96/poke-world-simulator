@@ -63,8 +63,9 @@ class NPC():
         if formated_gender in valid_genders:
                 return formated_gender
         else:
-            return 'Invalid'
-        
+            raise Exception ('Invalid Gender')
+            
+
     def checking_valid_categories(self, category):
         valid_categories = ('Bandit', 'Common', 'Guide', 'Gym Leader', 'Healer', 'Player', 'Professor', 'Rival', 'Seller', 'Specialist', 'Storyteller', 'Trader', 'Trainer')
         formated_category = str(category).title()
